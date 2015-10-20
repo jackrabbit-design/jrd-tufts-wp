@@ -145,7 +145,10 @@ add_action('wp_enqueue_scripts', 'enqueue_scripts');
 /* ========================================================================= */
     
 function enqueue_styles() {
+    wp_enqueue_style('style', get_bloginfo('url').'/ui/css/bootstrap.min.css', array(), null);
     wp_enqueue_style('style', get_bloginfo('url').'/ui/css/style.css', array(), null);
+    wp_enqueue_style('style', get_bloginfo('url').'/font-awesome/css/font-awesome.min.css', array(), null);
+    wp_enqueue_style('style', get_bloginfo('url').'/ui/css/animate.css', array(), null);
 }
 add_action('wp_enqueue_scripts', 'enqueue_styles');
 
