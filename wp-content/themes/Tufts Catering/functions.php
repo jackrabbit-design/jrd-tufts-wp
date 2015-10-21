@@ -35,7 +35,12 @@ add_filter('login_errors',create_function('$a', "return null;"));
 /* Post Thumbnail Sizes */
 add_theme_support( 'post-thumbnails' );
 set_post_thumbnail_size( 64, 64, true );
-//add_image_size( 'size-name', 100, 100, true);
+add_image_size( 'page-banner', 1800, 390, true);
+add_image_size( 'module-img', 900, 520, true);
+add_image_size( 'threecol-img', 201, 146, true);
+add_image_size( 'home-banner', 1800, 991, true);
+add_image_size( 'side-img', 516, 1000, false);
+add_image_size( 'author', 150, 146, array('top','center'));
 
 /* Declare Nav Menu Areas */
 if ( function_exists( 'register_nav_menus' ) ) {
@@ -145,10 +150,10 @@ add_action('wp_enqueue_scripts', 'enqueue_scripts');
 /* ========================================================================= */
     
 function enqueue_styles() {
-    wp_enqueue_style('style', get_bloginfo('url').'/ui/css/bootstrap.min.css', array(), null);
+    wp_enqueue_style('bootstrap', get_bloginfo('url').'/ui/css/bootstrap.min.css', array(), null);
     wp_enqueue_style('style', get_bloginfo('url').'/ui/css/style.css', array(), null);
-    wp_enqueue_style('style', get_bloginfo('url').'/font-awesome/css/font-awesome.min.css', array(), null);
-    wp_enqueue_style('style', get_bloginfo('url').'/ui/css/animate.css', array(), null);
+    wp_enqueue_style('font', get_bloginfo('url').'/font-awesome/css/font-awesome.min.css', array(), null);
+    wp_enqueue_style('animate', get_bloginfo('url').'/ui/css/animate.css', array(), null);
 }
 add_action('wp_enqueue_scripts', 'enqueue_styles');
 

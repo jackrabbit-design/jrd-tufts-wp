@@ -1,11 +1,9 @@
 <?php
-/*
 
-// Sample Register Post
-$postName         = 'Newsroom'; // Name of post type
-$postNameSlug     = 'news-post'; // Name of post type
-$postNameSingular = 'News Posts'; // Singular Name
-$postNamePlural   = 'News Posts'; // Plural Name
+$postName         = 'Menus'; // Name of post type
+$postNameSlug     = 'menu'; // Name of post type
+$postNameSingular = 'Menu'; // Singular Name
+$postNamePlural   = 'Menus'; // Plural Name
 register_post_type(
 	$postNameSlug, array(
 		'labels' => array(
@@ -28,27 +26,20 @@ register_post_type(
 		'exclude_from_search' => false,
 		'has_archive' => false,
 		'supports' => array(
-    		'title', 
-    		'editor', 
-    		'author',
-    		'thumbnail', //featured image, theme must also support thumbnails
-    		'excerpt',
-    		'trackbacks',
-    		'custom-fields',
-    		'comments',
-    		'revisions',
-    		'page-attributes' //template and menu order, hierarchical must be true 
+    		'title',
+    		'thumbnail',
+    		'revisions'
 		)
 	)
 );
 
-// Sample Register Taxonomy
-$taxonomyName         = 'News Type';
-$taxonomyNameSlug     = 'news-type';
-$taxonomyNameSingular = 'News Type';
-$taxonomyNamePlural   = 'News Types';
+
+$taxonomyName         = 'Menu Type';
+$taxonomyNameSlug     = 'menu-type';
+$taxonomyNameSingular = 'Menu Type';
+$taxonomyNamePlural   = 'Menu Types';
 register_taxonomy(
-	$taxonomyNameSlug, array($postNameSlug), array( 
+	$taxonomyNameSlug, array('menu'), array( 
 		'hierarchical' => true, // Category or Tag functionality
 		'query_var' => true,
 		'rewrite' => array('slug' => $taxonomyNameSlug),
@@ -70,4 +61,36 @@ register_taxonomy(
 		 )
 	)
 );
-*/
+
+$postName         = 'Testimonials'; // Name of post type
+$postNameSlug     = 'testimonial'; // Name of post type
+$postNameSingular = 'Testimonial'; // Singular Name
+$postNamePlural   = 'Testimonials'; // Plural Name
+register_post_type(
+	$postNameSlug, array(
+		'labels' => array(
+	       'name' => $postName,
+	       'singular_name' => $postNameSingular,
+	       'add_new' => 'Add ' . $postNameSingular,
+	       'add_new_item' => 'Add ' . $postNameSingular,
+	       'edit_item' => 'Edit ' . $postNameSingular,
+	       'search_items' => 'Search ' . $postNamePlural,
+	       'not_found' => 'No ' . $postNamePlural. ' found',
+	       'not_found_in_trash' => 'No ' . $postNamePlural. ' found in trash'
+	    ),
+		'public' => false,
+		'show_ui' => true,
+		'capability_type' => 'post',
+		'hierarchical' => true,
+		'rewrite' => array('slug' => $postNameSlug),
+		'query_var' => true,
+		'show_in_nav_menus' => false,
+		'exclude_from_search' => true,
+		'has_archive' => false,
+		'supports' => array(
+    		'title',
+    		'revisions'
+		)
+	)
+);
+
