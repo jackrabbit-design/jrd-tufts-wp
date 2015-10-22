@@ -1,4 +1,4 @@
-<?php 
+<?php global $P;
     while(the_flexible_field("modules",$P)):
     
         if(get_row_layout() == "three_column_content"): 

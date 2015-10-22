@@ -39,6 +39,7 @@ add_image_size( 'page-banner', 1800, 390, true);
 add_image_size( 'module-img', 900, 520, true);
 add_image_size( 'threecol-img', 201, 146, true);
 add_image_size( 'home-banner', 1800, 991, true);
+add_image_size( 'category', 544, 320, true);
 add_image_size( 'side-img', 516, 1000, false);
 add_image_size( 'author', 150, 146, array('top','center'));
 

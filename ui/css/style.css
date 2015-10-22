@@ -1018,7 +1018,7 @@ section {
     margin-bottom: 15px;
 }
 
-.menus .menu-information span {
+.menus .menu-information strong {
     display: block;
     font-family: "Gudea-Bold";
     font-size: 16px;

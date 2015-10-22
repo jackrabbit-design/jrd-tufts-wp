@@ -4,17 +4,17 @@
           <div class="row">
               <div class="col-md-7">
                 <div class="col-md-3">
-                    <a href="index.html" class="logo-footer" title="TUFTS - Catering"><img alt="" src="ui/images/logo-footer.png" /></a>
+                    <a href="<?php bloginfo('url'); ?>" class="logo-footer" title="TUFTS - Catering"><img alt="" src="<?php bloginfo('url'); ?>/ui/images/logo-footer.png" /></a>
                 </div>
                 <div class="col-md-6">
-                    <p>89 Curtis St, Medford, MA 02155 | 617-627-3411<span>&copy; 2015 TUFTS UNIVERSITY</span></p>
+                    <p><?php the_field('footer_address_phone_number','options'); ?><span>&copy; <?php echo date('Y'); ?> <?php the_field('footer_copyright','options'); ?></span></p>
                 </div>
                 <div class="col-md-3">
-                    <a href="#" class="download" title="DOWNLOAD BROCHURE">DOWNLOAD BROCHURE</a>
+                    <?php if(get_field('brochure_link','options')): ?><a href="<?php the_field('brochure_link','options'); ?>" class="download" title="DOWNLOAD BROCHURE">DOWNLOAD BROCHURE</a><?php endif; ?>
                 </div>
               </div>
               <div class="col-md-5">
-                  <a href="#" title="TUFTS University" class="university"><img alt="" src="ui/images/university.png" /></a>
+                  <a href="http://www.tufts.edu/" title="TUFTS University" class="university" target="_blank"><img alt="" src="<?php bloginfo('url'); ?>/ui/images/university.png" /></a>
               </div>
           </div>
         </div>

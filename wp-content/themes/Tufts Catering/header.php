@@ -48,7 +48,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <h1><a class="navbar-brand" href="index.html" title="TUFTS - Catering"><img alt="" src="ui/images/logo.png" /></a></h1>
+                <h1><a class="navbar-brand" href="<?php bloginfo('url'); ?>" title="TUFTS - Catering"><img alt="" src="<?php bloginfo('url'); ?>/ui/images/logo.png" /></a></h1>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="navbar-collapse cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left" id="bs-example-navbar-collapse-1">
