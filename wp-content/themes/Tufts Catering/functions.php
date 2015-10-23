@@ -41,6 +41,7 @@ add_image_size( 'threecol-img', 201, 146, true);
 add_image_size( 'home-banner', 1800, 991, true);
 add_image_size( 'category', 544, 320, true);
 add_image_size( 'side-img', 516, 1000, false);
+add_image_size( 'side-bar-menu', 360, 201, true);
 add_image_size( 'author', 150, 146, array('top','center'));
 
 /* Declare Nav Menu Areas */
@@ -322,14 +323,14 @@ function printr($var){ echo '<pre>'; print_r($var); echo '</pre>'; };
 
 /* ========================================================================= */
 /* !REMOVE ADMIN TOOLBAR */
-/* ========================================================================= */
+/* ========================================================================= 
 
 show_admin_bar( false );
 function my_function_admin_bar(){
   return false;
 }
 add_filter('show_admin_bar' , 'my_function_admin_bar');
-add_theme_support('admin-bar', array('callback' => '__return_false'));
+add_theme_support('admin-bar', array('callback' => '__return_false'));*/
 
 
 /* ========================================================================= */

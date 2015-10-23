@@ -4,7 +4,9 @@
         $bgimg = get_field('default_page_banner','options');
         $bgimgurl = $bgimg['sizes']['page-banner'];
         $bgimg2 = get_field('page_banner_image'); 
-        if(isset($bgimg2['sizes']['page-banner'])){ $bgimgurl = $bgimg['sizes']['page-banner']; } ?>
+        if(isset($bgimg2['sizes']['page-banner'])){ 
+        		$bgimgurl = $bgimg2['sizes']['page-banner']; 
+        } ?>
     <!-- Full Page Image Background Carousel Header -->
     <header class="header-image" style="background-image: url(<?php echo $bgimgurl; ?>);">
         <div class="headline">
@@ -150,8 +152,12 @@
         if(get_row_layout() == "general_content"): 
 ?> 
                         
-                            <?php $img = get_field('photo'); ?>
-                            <?php if(isset($img['sizes']['bio'])){ ?><div class="menu-image"><img src="<?php echo $img['sizes']['bio']; ?>" alt="<?php echo $img['alt']; ?>" /></div><?php } ?>
+                            
+                            <?php if($img = get_sub_field('top_image')){ ?>
+                            	<div class="menu-image">
+                            		<img src="<?php echo $img['sizes']['side-bar-menu']; ?>" alt="<?php echo $img['alt']; ?>" />
+                            	</div>
+                            <?php } ?>
                             
                             <div class="menu-information">
                                 <h3><?php the_sub_field('sidebar_headline'); ?></h3>
