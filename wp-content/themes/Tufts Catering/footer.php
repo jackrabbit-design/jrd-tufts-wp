@@ -21,6 +21,7 @@
     </footer>
 
     <?php wp_footer(); ?>
+    <?php if(is_page_template('template-contact.php')){ ?><script src="ui/js/contact_me.js"></script><?php } ?>
 
 </body>
 

@@ -158,20 +158,20 @@
                                 <?php the_sub_field('sidebar_content'); ?>
                             </div>
 <?php 
-        elseif(get_row_layout() == "pricing_table"): 
+        elseif(get_row_layout() == "place_an_order"): 
 ?>
                             <div class="order-section">
-                                <h3><?php the_sub_field('po_headline','options'); ?></h3>
+                                <h3><?php the_field('po_headline','options'); ?></h3>
                                 <div class="col-xs-5">
-                                    <img alt="" src="<?php the_sub_field('po_left_image','options'); ?>" />
-                                    <a href="<?php the_sub_field('po_left_button_link','options'); ?>" title="Order Online" target="_blank"><?php the_sub_field('po_left_button_link_text','options'); ?></a>
+                                    <img alt="" src="<?php the_field('po_left_image','options'); ?>" />
+                                    <a href="<?php the_field('po_left_button_link','options'); ?>" title="Order Online" target="_blank"><?php the_field('po_left_button_link_text','options'); ?></a>
                                 </div>
                                 <div class="col-xs-2">
                                     <img alt="" src="<?php bloginfo('url'); ?>/ui/images/or-vertical.png" class="" height="192" width="32">
                                 </div>
                                 <div class="col-xs-5">
-                                    <img alt="" src="<?php the_sub_field('po_right_image','options'); ?>" />
-                                    <p>CALL <strong><?php the_sub_field('po_phone_number_text','options'); ?></strong></p>
+                                    <img alt="" src="<?php the_field('po_right_image','options'); ?>" />
+                                    <p>CALL <strong><?php the_field('po_phone_number_text','options'); ?></strong></p>
                                 </div>
                             </div>
 <?php endif; endwhile; ?>
