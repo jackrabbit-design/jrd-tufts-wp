@@ -5,6 +5,7 @@
 /* ========================================================================= */
 
 include_once 'functions/functions-post-types.php';
+include_once 'functions/tuft-walker.php';
 //include_once 'functions/functions-widgets.php';
 //include_once 'functions/functions-comments.php';
 
@@ -323,14 +324,14 @@ function printr($var){ echo '<pre>'; print_r($var); echo '</pre>'; };
 
 /* ========================================================================= */
 /* !REMOVE ADMIN TOOLBAR */
-/* ========================================================================= 
+/* ========================================================================= */
 
 show_admin_bar( false );
 function my_function_admin_bar(){
   return false;
 }
 add_filter('show_admin_bar' , 'my_function_admin_bar');
-add_theme_support('admin-bar', array('callback' => '__return_false'));*/
+add_theme_support('admin-bar', array('callback' => '__return_false'));
 
 
 /* ========================================================================= */

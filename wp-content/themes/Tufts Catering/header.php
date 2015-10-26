@@ -43,47 +43,59 @@
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle c-hamburger c-hamburger--htx" id="showLeftPush">
-					<span>toggle menu</span>
-                 </button>
-                <h1><a class="navbar-brand" href="<?php bloginfo('url'); ?>" title="TUFTS - Catering"><img alt="" src="<?php bloginfo('url'); ?>/ui/images/logo.png" /></a></h1>
+                    <span>toggle menu</span>
+                </button>
+                <h1><a class="navbar-brand" href="<?php bloginfo('url'); ?>" title="TUFTS - Catering"><img alt="" src="<?php bloginfo('url'); ?>/ui/images/logo.png"/></a></h1>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="navbar-collapse cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav navbar-right">
-                    <li>
-                        <a href="#">ORDER ONLINE</a>
-                    </li>
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">PLAN <b class="caret"></b></a>
-                        <ul class="dropdown-menu">
-                            <li>
-                                <a href="#">Overview</a>
-                            </li>
-                            <li>
-                                <a href="#">Facilities & Room Types</a>
-                            </li>
-                            <li>
-                                <a href="#">Service Types</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="#">MENUS</a>
-                    </li>
-                    <li>
-                        <a href="#">ORDER</a>
-                    </li>
-                    <li>
-                        <a href="#">LEARN</a>
-                    </li>
-                    <li>
-                        <a href="#">CONTACT</a>
-                    </li>
-                </ul>
-            </div>
+            
+            <?php $MainArgs = array(
+            	'theme_location' => 'main-menu',
+            	'container' => 'div',
+            	'container_id' => 'bs-example-navbar-collapse-1',
+            	'container_class' => 'navbar-collapse cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left',
+            	'menu_class' => 'nav navbar-nav navbar-right',
+            	'menu_id' => 'header-menu',
+            	'depth' => 2,
+            	'walker' => new tuft_walker
+            ); wp_nav_menu($MainArgs); 
+
+            // <div class="navbar-collapse cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left" id="bs-example-navbar-collapse-1">
+            //     <ul class="nav navbar-nav navbar-right">
+            //         <li>
+            //             <a href="#">ORDER ONLINE</a>
+            //         </li>
+            //         <li class="dropdown">
+            //             <a href="#" class="dropdown-toggle" data-toggle="dropdown">PLAN <b class="caret"></b></a>
+            //             <ul class="dropdown-menu">
+            //                 <li>
+            //                     <a href="#">Overview</a>
+            //                 </li>
+            //                 <li>
+            //                     <a href="#">Facilities & Room Types</a>
+            //                 </li>
+            //                 <li>
+            //                     <a href="#">Service Types</a>
+            //                 </li>
+            //             </ul>
+            //         </li>
+            //         <li>
+            //             <a href="#">MENUS</a>
+            //         </li>
+            //         <li>
+            //             <a href="#">ORDER</a>
+            //         </li>
+            //         <li>
+            //             <a href="#">LEARN</a>
+            //         </li>
+            //         <li>
+            //             <a href="#">CONTACT</a>
+            //         </li>
+            //     </ul>
+            // </div>
+?>
+
             <!-- /.navbar-collapse -->
         </div>
         <!-- /.container -->
     </nav>
-
-    

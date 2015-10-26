@@ -21,6 +21,11 @@ jQuery(function($){
         interval: 5000 //changes the speed
     });
     
+
+    $('li.dropdown > a').addClass('dropdown-toggle');
+    $('li.dropdown > a').attr('data-toggle', 'dropdown');
+    	
+
     
     $('.nav-tabs-dropdown').each(function(i, elm) {
 
