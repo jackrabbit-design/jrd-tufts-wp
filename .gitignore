@@ -2,3 +2,8 @@
 wp-config.php
 
 prepros.cfg
+
+/_backup
+/wp-content/themes/twentyfifteen
+/wp-content/plugins
+/wp-content/upgrade

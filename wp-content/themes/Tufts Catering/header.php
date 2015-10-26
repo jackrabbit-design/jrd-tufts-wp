@@ -42,12 +42,9 @@
         <div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
-                <button type="button" class="navbar-toggle" id="showLeftPush">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
+                <button type="button" class="navbar-toggle c-hamburger c-hamburger--htx" id="showLeftPush">
+					<span>toggle menu</span>
+                 </button>
                 <h1><a class="navbar-brand" href="<?php bloginfo('url'); ?>" title="TUFTS - Catering"><img alt="" src="<?php bloginfo('url'); ?>/ui/images/logo.png" /></a></h1>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->

@@ -27,6 +27,15 @@ var map = L.mapbox.map('map-resp', 'alejandrojjs.nmoefom9');
 
 var myLayer = L.mapbox.featureLayer().addTo(map);
 
+// Disable drag and zoom handlers.
+map.dragging.disable();
+map.touchZoom.disable();
+map.doubleClickZoom.disable();
+map.scrollWheelZoom.disable();
+
+// Disable tap handler, if present.
+if (map.tap) map.tap.disable();
+
 var geoJson = [{
     "type": "Feature",
     "geometry": {
@@ -86,6 +95,15 @@ L.mapbox.accessToken = 'pk.eyJ1IjoiYWxlamFuZHJvampzIiwiYSI6ImNpZnEyOWJiaDZyYWdza
 var map = L.mapbox.map('map', 'alejandrojjs.nmoefom9');
 
 var myLayer = L.mapbox.featureLayer().addTo(map);
+
+// Disable drag and zoom handlers.
+map.dragging.disable();
+map.touchZoom.disable();
+map.doubleClickZoom.disable();
+map.scrollWheelZoom.disable();
+
+// Disable tap handler, if present.
+if (map.tap) map.tap.disable();
 
 var geoJson = [{
     "type": "Feature",
