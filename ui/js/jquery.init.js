@@ -5,6 +5,12 @@
 new WOW().init();
 
 jQuery(function($){
+	$('.navbar-nav > li.menu-item-has-children ').append('<span></span>');
+
+	$('.navbar-nav li span').on('click', function(){
+		$(this).siblings('ul').toggleClass('open');
+		
+	});
 
     var shrinkHeader = 300;
     $(window).scroll(function() {
@@ -16,6 +22,35 @@ jQuery(function($){
             $('.navbar').removeClass('shrink');
         }
     });
+
+    
+
+
+
+
+    var $sidebar   = $("#sidebar"),
+        $window    = $(window),
+        offset     = $sidebar.offset(),
+        topPadding = 60;
+
+        //console.log($("#left-sidebar").height());
+
+    $window.scroll(function() {
+        if ($window.scrollTop() > offset.top) {
+           if ($window.scrollTop() < ($("#left-sidebar").height())-topPadding) {
+            $sidebar.stop().animate({
+                marginTop: $window.scrollTop() - offset.top + topPadding
+            });
+            }
+        } else {
+            $sidebar.stop().animate({
+                marginTop: 0
+            });
+        }
+    });
+
+
+
     
     $('.carousel').carousel({
         interval: 5000 //changes the speed
@@ -73,6 +108,8 @@ function getCurrentScroll() {
     return window.pageYOffset;
     }
 });
+
+
 
 
 (function() {

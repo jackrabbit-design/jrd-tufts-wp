@@ -218,10 +218,31 @@ myLayer.setGeoJSON(geoJson);
         <hr>
 			<div class="container">
 				<div class="row">
+<!--  <form name="sentMessage" id="contactForm" novalidate>
+                        <div class="col-md-4">
+                            <div class="control-group form-group">
+                                <div class="controls">
+                                    <label>Name: <span>*</span></label>
+                                    <input type="text" class="form-control" id="name" required data-validation-required-message="Please enter your name.">
+                                    <p class="help-block"></p>
+                                </div>
+                            </div>
+                            <div class="control-group form-group">
+                                <div class="controls">
+                                    <label>Department:</label>
+                                    <input type="text" class="form-control" id="department" >
+                                </div>
+                            </div>
+                        </div>
+</form> -->
+					<?php gravity_form( 1, true, false); ?>
                     <div class="col-md-12">
                         <h3 class="title-section">Get in touch with Tufts Catering</h3>
                     </div>
-                    <form name="sentMessage" id="contactForm" novalidate>
+					
+
+
+                  <!-- <form name="sentMessage" id="contactForm" novalidate>
                         <div class="col-md-4">
                             <div class="control-group form-group">
                                 <div class="controls">
@@ -266,13 +287,13 @@ myLayer.setGeoJSON(geoJson);
                         <div class="col-md-12">
                             <div class="controls center">
                                 <div id="success"></div>
-                                <!-- For success/fail messages -->
+                            
                                 <button type="submit" class="btn btn-primary">Send Message</button>
                             </div>
                         </div>
 
 
-                    </form>
+                    </form>  -->
 				</div>
 			</div>
 		</section>

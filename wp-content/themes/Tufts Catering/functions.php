@@ -155,7 +155,7 @@ add_action('wp_enqueue_scripts', 'enqueue_scripts');
 function enqueue_styles() {
     wp_enqueue_style('bootstrap', get_bloginfo('url').'/ui/css/bootstrap.min.css', array(), null);
     wp_enqueue_style('style', get_bloginfo('url').'/ui/css/style.css', array(), null);
-    wp_enqueue_style('font', get_bloginfo('url').'/font-awesome/css/font-awesome.min.css', array(), null);
+    wp_enqueue_style('font', get_bloginfo('url').'/ui/font-awesome/css/font-awesome.min.css', array(), null);
     wp_enqueue_style('animate', get_bloginfo('url').'/ui/css/animate.css', array(), null);
 }
 add_action('wp_enqueue_scripts', 'enqueue_styles');
@@ -324,7 +324,7 @@ function printr($var){ echo '<pre>'; print_r($var); echo '</pre>'; };
 
 /* ========================================================================= */
 /* !REMOVE ADMIN TOOLBAR */
-/* ========================================================================= */
+/* ========================================================================= 
 
 show_admin_bar( false );
 function my_function_admin_bar(){
@@ -333,7 +333,7 @@ function my_function_admin_bar(){
 add_filter('show_admin_bar' , 'my_function_admin_bar');
 add_theme_support('admin-bar', array('callback' => '__return_false'));
 
-
+*/
 /* ========================================================================= */
 /* !YOAST ANALYZE CUSTOM FIELDS - Make Yoast Scan Our Custom Fields */
 /* ========================================================================= */

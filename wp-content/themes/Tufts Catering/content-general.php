@@ -6,10 +6,10 @@
 
         <div class="col-md-12">
             <div class="col-md-6">
-                <?php the_sub_field('content',$P); ?>
+                <?php the_sub_field('content'); ?>
             </div>
             <div class="col-md-6">
-            <?php $img = get_sub_field('image',$P); ?>
+            <?php $img = get_sub_field('image'); ?>
             <?php if(isset($img['sizes']['side-img'])){ ?><img src="<?php echo $img['sizes']['side-img']; ?>" alt="<?php echo $img['alt']; ?>" class="img-responsive" /><?php } ?>
             </div>
         </div>
@@ -19,11 +19,11 @@
 ?>
         <div class="col-md-12">
             <div class="col-md-6">
-                <?php $img = get_sub_field('image',$P); ?>
+                <?php $img = get_sub_field('image'); ?>
                 <?php if(isset($img['sizes']['side-img'])){ ?><img src="<?php echo $img['sizes']['side-img']; ?>" alt="<?php echo $img['alt']; ?>" class="img-responsive" /><?php } ?>
             </div>
             <div class="col-md-6">
-                <?php the_sub_field('content',$P); ?>
+                <?php the_sub_field('content'); ?>
             </div>
         </div>
    

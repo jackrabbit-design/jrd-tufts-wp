@@ -63,6 +63,7 @@
                 <div class="tab-pane<?php if($t == 1){ ?> active<?php } ?>" id="<?php echo str_replace(' ','-',strtolower(get_sub_field('tab_name'))); ?>">
                     <div class="menus">
                         <div class="col-md-7">
+                        	<div id="left-sidebar">
 <?php   
     while(the_flexible_field("tab_menu_sections")):
     
@@ -78,21 +79,24 @@
                                 <div class="description-menu-type">
                             <?php while(has_sub_field('description_sections')): ?>
                             <?php if(get_sub_field('description_section_width') == 'full'){ ?>
-                                    <div class="col-md-12">
+                                    <!-- <div class="col-md-12"> -->
                                         <?php if(get_sub_field('description_section_headline')): ?><span><?php the_sub_field('description_section_headline'); ?></span><?php endif; ?>
-                                        <p><?php while(has_sub_field('description_section_items')): ?>
-                                        <?php the_sub_field('item_name'); ?><br />
-                                        <?php endwhile; ?></p>
-                                    </div>
+                                        <?php if($headlineItalic = get_sub_field('description_section_headline_italic')): ?><p><em><?php echo $headlineItalic; ?></em></p><?php endif; ?>
+                                       	<?php while(has_sub_field('description_section_items')): ?>
+                                         <p><?php the_sub_field('item_name'); ?></p>
+                                        <?php endwhile; ?>
+                                    <!-- </div> -->
                             <?php } else { ?>
                                     <div class="col-md-6">
                                         <?php if(get_sub_field('description_section_headline')): ?><span><?php the_sub_field('description_section_headline'); ?></span><?php endif; ?>
+                                        <?php if($headlineItalic = get_sub_field('description_section_headline_italic')): ?><p><em><?php echo $headlineItalic; ?></em></p><?php endif; ?>
                                         <p><?php while(has_sub_field('description_section_items')): ?>
                                         <?php the_sub_field('item_name'); ?><br />
                                         <?php endwhile; ?></p>
                                     </div>
                                     <div class="col-md-6">
                                         <?php if(get_sub_field('description_section_2_headline')): ?><span><?php the_sub_field('description_section_2_headline'); ?></span><?php endif; ?>
+                                        <?php if($headlineItalic2 = get_sub_field('description_section_2_headline_italic')): ?><p><em><?php echo $headlineItalic2; ?></em></p><?php endif; ?>
                                         <p><?php while(has_sub_field('description_section_2_items')): ?>
                                         <?php the_sub_field('item_name'); ?><br />
                                         <?php endwhile; ?></p>
@@ -140,11 +144,13 @@
                             </div>
                         
 <?php endif; endwhile; ?>
+</div>
                         </div>
                         <div class="col-md-1">
                         </div>                        
                         
                         <div class="col-md-4">
+                        	<div id="sidebar">
                         
 <?php 
     while(the_flexible_field("tab_sidebar_modules")):
@@ -190,6 +196,7 @@
             <?php if($tabcount > 1){ ?></div><?php } ?>
         <?php //endif; ?>
         </div>
+    </div>
         <!-- /.row -->
     </div>
     <!-- /.container -->
