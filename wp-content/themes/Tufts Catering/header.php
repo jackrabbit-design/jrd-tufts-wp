@@ -35,7 +35,7 @@
 
 </head>
 
-<body class="cbp-spmenu-push">
+<body <?php body_class('cbp-spmenu-push'); ?>>
 
     <!-- Navigation -->
     <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation" id="navigate">

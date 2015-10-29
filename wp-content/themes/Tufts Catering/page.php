@@ -4,7 +4,7 @@
         $bgimg = get_field('default_page_banner','options');
         $bgimgurl = $bgimg['sizes']['page-banner'];
         $bgimg2 = get_field('page_banner_image'); 
-        if(isset($bgimg2['sizes']['page-banner'])){ $bgimgurl = $bgimg['sizes']['page-banner']; } ?>
+        if(isset($bgimg2['sizes']['page-banner'])){ $bgimgurl = $bgimg2['sizes']['page-banner']; } ?>
     <!-- Full Page Image Background Carousel Header -->
     <header class="header-image" style="background-image: url(<?php echo $bgimgurl; ?>);">
         <div class="headline">
