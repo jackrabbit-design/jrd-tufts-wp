@@ -10,7 +10,11 @@
             </div>
             <div class="col-md-6">
             <?php $img = get_sub_field('image'); ?>
-            <?php if(isset($img['sizes']['side-img'])){ ?><img src="<?php echo $img['sizes']['side-img']; ?>" alt="<?php echo $img['alt']; ?>" class="img-responsive" /><?php } ?>
+            <?php if(isset($img['sizes']['side-img'])){ ?>
+            	<div class="border-img">
+            		<img src="<?php echo $img['sizes']['side-img']; ?>" alt="<?php echo $img['alt']; ?>" class="img-responsive" />
+				</div>
+            <?php } ?>
             </div>
         </div>
 
@@ -20,7 +24,11 @@
         <div class="col-md-12">
             <div class="col-md-6">
                 <?php $img = get_sub_field('image'); ?>
-                <?php if(isset($img['sizes']['side-img'])){ ?><img src="<?php echo $img['sizes']['side-img']; ?>" alt="<?php echo $img['alt']; ?>" class="img-responsive" /><?php } ?>
+                <?php if(isset($img['sizes']['side-img'])){ ?>
+                <div class="border-img">
+                	<img src="<?php echo $img['sizes']['side-img']; ?>" alt="<?php echo $img['alt']; ?>" class="img-responsive" />
+                </div>
+                <?php } ?>
             </div>
             <div class="col-md-6">
                 <?php the_sub_field('content'); ?>

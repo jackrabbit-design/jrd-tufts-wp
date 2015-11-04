@@ -179,6 +179,7 @@ i, em {
 	 z-index: -1;
 	-webkit-transform: translateX(-50%);
 	-moz-transform: translateX(-50%);
+	-ms-transform: translateX(-50%);
 	transform: translateX(-50%);
 	overflow: hidden;
 }
@@ -403,12 +404,14 @@ header.carousel .fill {
   z-index: 2;
 }
 
-
+.carousel-caption{
+	text-shadow: none;
+}
 header.carousel .item .carousel-caption h1 {
     font-family: "Conv_Monthoers";
-    font-size: 85px;
-    letter-spacing: -2px;
-    line-height: 80px;
+    font-size: 113px;
+/*     letter-spacing: -2px; */
+    line-height: 120px;
     position: absolute;
     text-align: center;
     top: 35%;
@@ -1100,7 +1103,7 @@ section {
 }
 
 .headline {
-    padding: 150px 0 100px;
+    padding: 200px 0 60px;
 }
 
 .headline h1 {
@@ -1344,6 +1347,31 @@ td:first-child {
 
 .general-content {
     line-height: 25px;
+}
+
+.border-img{
+position: relative;
+}
+
+.border-img:before{
+	content: '';
+    display: block;
+    border: 5px solid #f38a00;
+    position: absolute;
+    width: 97%;
+    height: 96.5%;
+    top: 50%;
+    left: 50%;
+    z-index: 0;
+    -webkit-transform: translate(-50%,-50%);
+    -moz-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+}
+
+
+#map, #map-resp{
+	background: url(../images/map.jpg) no-repeat center center; background-size: cover;
 }
 
 .general-content h1,

@@ -39,7 +39,7 @@
     </section>
     <!-- /.container -->
 
-<?php if(get_field('menu_content')): $tabcount = count(get_field('menu_content')); echo $tabcount; endif; ?>
+<?php if(get_field('menu_content')): $tabcount = count(get_field('menu_content')); endif; ?>
 <?php //while(has_sub_field('repeater_field_name')): ?>
 
     <!-- Features Section -->
@@ -54,60 +54,59 @@
                     <a href="#" class="nav-tabs-dropdown dropdownes-title">Tabs</a>
                     <ul id="nav-tabs-wrapper" class="nav nav-tabs">
                     <?php $t = 1; while(has_sub_field('menu_content')): ?>
-                        <li class="dropdownes-list<?php if($t == 1){ ?> active<?php } ?>"><a href="#<?php echo str_replace(' ','-',strtolower(get_sub_field('tab_name'))); ?>" data-toggle="tab"><?php the_sub_field('tab_name'); ?></a></li>
+                        <li class="dropdownes-list<?php if($t == 1){ ?> active<?php } ?>"><a href="#<?php echo clean(str_replace(' ','-',strtolower(get_sub_field('tab_name')))); ?>" data-toggle="tab"><?php the_sub_field('tab_name'); ?></a></li>
                     <?php $t++; endwhile; ?>
                     </ul>
                 </div><?php } ?>
             <div id="my-tab-content" class="tab-content">
-            <?php $t = 1; while(has_sub_field('menu_content')): ?>
-                <div class="tab-pane<?php if($t == 1){ ?> active<?php } ?>" id="<?php echo str_replace(' ','-',strtolower(get_sub_field('tab_name'))); ?>">
+            <?php $t = 1; while(has_sub_field('menu_content')) : ?>
+                <div class="tab-pane<?php if($t == 1){ ?> active<?php } ?>" id="<?php echo clean (str_replace(' ','-',strtolower(get_sub_field('tab_name')))); ?>">
                     <div class="menus">
                         <div class="col-md-7">
                         	<div id="left-sidebar">
-<?php   
-    while(the_flexible_field("tab_menu_sections")):
+								<?php while(the_flexible_field("tab_menu_sections")):
     
-        if(get_row_layout() == "description_table"): 
-?> 
-                            <div class="menu-type">
-                            <?php if(get_sub_field('section_header')): ?>
-                                <div class="title-menu-type">
-                                    <h3><?php the_sub_field('section_header'); ?></h3>
-                                    <span><?php the_sub_field('section_price'); ?></span>
-                                </div>
-                            <?php endif; ?>
-                                <div class="description-menu-type">
-                            <?php while(has_sub_field('description_sections')): ?>
-                            <?php if(get_sub_field('description_section_width') == 'full'){ ?>
-                                    <!-- <div class="col-md-12"> -->
-                                        <?php if(get_sub_field('description_section_headline')): ?><span><?php the_sub_field('description_section_headline'); ?></span><?php endif; ?>
-                                        <?php if($headlineItalic = get_sub_field('description_section_headline_italic')): ?><p><em><?php echo $headlineItalic; ?></em></p><?php endif; ?>
-                                       	<?php while(has_sub_field('description_section_items')): ?>
-                                         <p><?php the_sub_field('item_name'); ?></p>
-                                        <?php endwhile; ?>
-                                    <!-- </div> -->
-                            <?php } else { ?>
-                                    <div class="col-md-6">
-                                        <?php if(get_sub_field('description_section_headline')): ?><span><?php the_sub_field('description_section_headline'); ?></span><?php endif; ?>
-                                        <?php if($headlineItalic = get_sub_field('description_section_headline_italic')): ?><p><em><?php echo $headlineItalic; ?></em></p><?php endif; ?>
-                                        <p><?php while(has_sub_field('description_section_items')): ?>
-                                        <?php the_sub_field('item_name'); ?><br />
-                                        <?php endwhile; ?></p>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <?php if(get_sub_field('description_section_2_headline')): ?><span><?php the_sub_field('description_section_2_headline'); ?></span><?php endif; ?>
-                                        <?php if($headlineItalic2 = get_sub_field('description_section_2_headline_italic')): ?><p><em><?php echo $headlineItalic2; ?></em></p><?php endif; ?>
-                                        <p><?php while(has_sub_field('description_section_2_items')): ?>
-                                        <?php the_sub_field('item_name'); ?><br />
-                                        <?php endwhile; ?></p>
-                                    </div>
-                            <?php } endwhile; ?>
-                                </div>
-                            </div>
+										if(get_row_layout() == "description_table"): 
+							?> 
+		                            <div class="menu-type">
+		                            <?php if(get_sub_field('section_header')): ?>
+		                                <div class="title-menu-type">
+		                                    <h3><?php the_sub_field('section_header'); ?></h3>
+		                                    <span><?php the_sub_field('section_price'); ?></span>
+		                                </div>
+		                            <?php endif; ?>
+		                                <div class="description-menu-type">
+		                            <?php while(has_sub_field('description_sections')): ?>
+		                            <?php if(get_sub_field('description_section_width') == 'full'){ ?>
+		                                    <!-- <div class="col-md-12"> -->
+		                                        <?php if(get_sub_field('description_section_headline')): ?><span><?php the_sub_field('description_section_headline'); ?></span><?php endif; ?>
+		                                        <?php if($headlineItalic = get_sub_field('description_section_headline_italic')): ?><p><em><?php echo $headlineItalic; ?></em></p><?php endif; ?>
+		                                       	<?php while(has_sub_field('description_section_items')): ?>
+		                                         <p><?php the_sub_field('item_name'); ?></p>
+		                                        <?php endwhile; ?>
+		                                    <!-- </div> -->
+		                            <?php } else { ?>
+		                                    <div class="col-md-6">
+		                                        <?php if(get_sub_field('description_section_headline')): ?><span><?php the_sub_field('description_section_headline'); ?></span><?php endif; ?>
+		                                        <?php if($headlineItalic = get_sub_field('description_section_headline_italic')): ?><p><em><?php echo $headlineItalic; ?></em></p><?php endif; ?>
+		                                        <p><?php while(has_sub_field('description_section_items')): ?>
+		                                        <?php the_sub_field('item_name'); ?><br />
+		                                        <?php endwhile; ?></p>
+		                                    </div>
+		                                    <div class="col-md-6">
+		                                        <?php if(get_sub_field('description_section_2_headline')): ?><span><?php the_sub_field('description_section_2_headline'); ?></span><?php endif; ?>
+		                                        <?php if($headlineItalic2 = get_sub_field('description_section_2_headline_italic')): ?><p><em><?php echo $headlineItalic2; ?></em></p><?php endif; ?>
+		                                        <p><?php while(has_sub_field('description_section_2_items')): ?>
+		                                        <?php the_sub_field('item_name'); ?><br />
+		                                        <?php endwhile; ?></p>
+		                                    </div>
+		                            <?php } endwhile; ?>
+		                                </div>
+		                            </div>
                         
-<?php 
-        elseif(get_row_layout() == "pricing_table"): 
-?>
+							<?php 
+							        elseif(get_row_layout() == "pricing_table"): 
+							?>
                         
                             <div class="menu-type">
                                 <div class="title-menu-type">
@@ -145,7 +144,7 @@
                         
 <?php endif; endwhile; ?>
 </div>
-                        </div>
+       </div>                 </div>
                         <div class="col-md-1">
                         </div>                        
                         

@@ -25,8 +25,12 @@ jQuery(function($){
 
     
 
-
-
+	///Border Around Images
+	
+	$(window).load(function() {
+		var customWidth = $('.border-img img').width();
+		$('.border-img').css('max-width', customWidth);
+	});
 
     var $sidebar   = $("#sidebar"),
         $window    = $(window),

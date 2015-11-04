@@ -32,7 +32,10 @@
     <!--[if lt IE 9]>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-
+	<?php if(is_page_template('template-contact.php')){ ?>
+		<script src='https://api.mapbox.com/mapbox.js/v2.2.2/mapbox.js'></script>
+		<link href='https://api.mapbox.com/mapbox.js/v2.2.2/mapbox.css' rel='stylesheet' />	
+	<?php } ?>
 </head>
 
 <body <?php body_class('cbp-spmenu-push'); ?>>

@@ -20,9 +20,12 @@ get_header(); the_post(); ?>
 			<div class="container-fluid">
 				<div class="row">
 					<div class="col-md-6 nopadding features-intro-img hidden-md hidden-lg">
-						<div style="position: relative; width: 100%; height: 100%;"><div id='map-resp' style="height: 520px; position: relative; width: 100%;"></div></div>
-<script>
+						
+							<div id='map-resp' style="height: 520px; position: relative; width: 100%;"></div>
+						</div>
+<script>/*
 L.mapbox.accessToken = 'pk.eyJ1IjoiYWxlamFuZHJvampzIiwiYSI6ImNpZnEyOWJiaDZyYWdzaWtxbzlhaXcyZzAifQ.CqyCw-Fqu1WJbK1M_zZa1g';
+//var map = L.mapbox.map('map-resp', 'alejandrojjs.nmoefom9');
 var map = L.mapbox.map('map-resp', 'alejandrojjs.nmoefom9');
 
 var myLayer = L.mapbox.featureLayer().addTo(map);
@@ -43,6 +46,7 @@ var geoJson = [{
         "coordinates": [-71.125, 42.406]
     },
     "properties": {
+	        "layers": ["grayscale"],
         "title": "TUFTS - Catering",
         "icon": {
             "iconUrl": "<?php bloginfo('url'); ?>/ui/images/marked.png",
@@ -63,7 +67,7 @@ myLayer.on('layeradd', function(e) {
 });
 
 // Add features to the map.
-myLayer.setGeoJSON(geoJson);
+myLayer.setGeoJSON(geoJson); */ 
 </script>
 					</div>
 					<div class="col-md-6 nopadding">
@@ -89,8 +93,10 @@ myLayer.setGeoJSON(geoJson);
         				</div>
 					</div>
 					<div class="col-md-6 nopadding visible-lg visible-md hidden-sm">
-						<div style="position: relative; width: 100%; height: 100%;"><div id='map' style="height: 520px; position: relative; width: 100%;"></div></div>
-<script>
+						<div style="position: relative; width: 100%; height: 100%;">
+							<div id='map' style="height: 520px; position: relative; width: 100%;"></div>
+						</div>
+<script> /*
 L.mapbox.accessToken = 'pk.eyJ1IjoiYWxlamFuZHJvampzIiwiYSI6ImNpZnEyOWJiaDZyYWdzaWtxbzlhaXcyZzAifQ.CqyCw-Fqu1WJbK1M_zZa1g';
 var map = L.mapbox.map('map', 'alejandrojjs.nmoefom9');
 
@@ -107,11 +113,13 @@ if (map.tap) map.tap.disable();
 
 var geoJson = [{
     "type": "Feature",
+    
     "geometry": {
         "type": "Point",
         "coordinates": [-71.125, 42.406]
     },
     "properties": {
+	    "layers": ["grayscale"],
         "title": "TUFTS - Catering",
         "icon": {
             "iconUrl": "<?php bloginfo('url'); ?>/ui/images/marked.png",
@@ -132,7 +140,7 @@ myLayer.on('layeradd', function(e) {
 });
 
 // Add features to the map.
-myLayer.setGeoJSON(geoJson);
+myLayer.setGeoJSON(geoJson); */
 </script>
 					</div>
 				</div>
