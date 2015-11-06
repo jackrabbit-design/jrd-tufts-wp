@@ -32,6 +32,27 @@
 	font-style: normal;
 }
 
+#sidebar h3{
+	color: #F38A00;
+	margin-bottom: 16px;
+}
+#sidebar h4{
+	text-transform: uppercase; 
+	font-size: 16px;
+	margin-bottom: 2px;
+	color: #1F1F1F;
+	font-family: 'Gudea-Bold';
+}
+
+#sidebar p{
+	color: #5F636A;
+}
+
+
+h4 + p{
+	margin: 0 0 15px;
+}
+
 *{
   outline: 0 none;
 }
@@ -75,6 +96,9 @@ i, em {
     font-size: 14px;
 }
 
+p em{
+	 font-size: 16px;
+}
 .nopadding {
     margin: 0 !important;
     padding: 0 !important;
@@ -221,7 +245,12 @@ i, em {
 	position: absolute;
 	right: 0;
 	top: 54px;
+	    transition: all 0.3s;
 
+}
+
+.shrink .navbar-nav > li.menu-item-has-children:after{
+    top: 24px;
 }
 
 .navbar-nav > li.menu-item-has-children:hover:after{
@@ -315,6 +344,9 @@ i, em {
 header.carousel {
     height: 100%;
 }
+.carousel-indicators{
+	bottom: 40px;
+}
 
 header.carousel .item,
 header.carousel .item.active,
@@ -330,10 +362,20 @@ header.carousel .fill {
 }
 
 .carousel-caption {
+	    width: 70%;
+	    left: 50%;
+	    top: 50%;
+	    -webkit-transform: translate(-50%,-50%);
+	    -moz-transform: translate(-50%,-50%);
+	    -ms-transform: translate(-50%,-50%);
+	    transform: translate(-50%,-50%);
+
+/*
     left: 25%;
     bottom: 0;
     right: 25%;
     top: 0;
+*/
 }
 
 .carousel-control {
@@ -481,13 +523,22 @@ section {
     border-top: 1px solid #d8d8d8;
 }
 
+.page-template-template-contact-php .container-fluid{padding: 0;}
+
 .centered {
-  width: 65%;
+  width: 75%;
   margin: auto;
   float: none;
 }
 
 /* Panel Styles */
+
+#menu-types .col-md-6{float: none; display: inline-block; width: 48%;}
+
+
+.table>tbody>tr>td, .table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th, .table>thead>tr>td, .table>thead>tr>th{
+	padding: 8px 0;
+}
 
 .panel {
     box-shadow: none;
@@ -818,6 +869,7 @@ section {
 .gform_wrapper{
 	display: block;
 	position: relative;
+	margin-bottom: 50px;
 }
 .gform_wrapper label{
 	color: #5f636a;
@@ -1022,8 +1074,9 @@ section {
 }
 
 .tabs-content .dotted-line.gray{
-    margin-bottom: 45px;
+    margin-bottom: 20px;
     position: relative;
+    top: -15px;
 }
 
 .tabs-content .nav-tabs {
@@ -1285,11 +1338,12 @@ section {
 .table > tbody > tr > td, .table > tbody > tr > th, .table > tfoot > tr > td, .table > tfoot > tr > th, .table > thead > tr > td, .table > thead > tr > th {
     border-top: none;
 }
-
-th, td {
-    text-align: right;
-    border: none;
-    color: #9b9b9b;
+.general-content table {margin-bottom: 15px; width: 100%;}
+.general-content th, td { 
+	font-size: 16px;
+	vertical-align: top;
+	padding: 7px 20px 7px 0;
+	border-bottom: 1px solid #DEDEDE;
 }
 
 th {
@@ -1327,6 +1381,8 @@ td:first-child {
     text-transform: uppercase;
 }
 
+
+
 .menus .order-section a:hover {
     background-color: #fff;
     color: #f38a00;
@@ -1337,10 +1393,30 @@ td:first-child {
     font-size: 14px;
 }
 
+.order-section .col-xs-5{text-align: center;}
+
+.order-section .phone{
+	position: relative;
+	left: 9px;
+}
+
 .menus .order-section img {
     display: block;
     margin: auto auto 20px;
     text-align: center;
+}
+
+.order-button{
+	background: #F38A00;
+	color: #fff;
+	text-transform: uppercase; 
+	padding: 9px 6px;
+	display: block;
+	border: 1px solid #F38A00;
+}
+.order-button:hover{
+	text-decoration: none;
+	background: #fff;
 }
 
 /* General Content */
@@ -1382,7 +1458,7 @@ position: relative;
 .general-content h6{
     color: #f38a00;
     line-height: 23px;
-    margin-bottom: 25px;
+    margin-bottom: 15px;
     margin-top: 0;
 }
 
@@ -1390,10 +1466,17 @@ position: relative;
     margin-bottom: 45px;
 }
 
+.general-content ul {
+	padding: 0 0 0 25px;
+}
+
 .general-content ul li {
     list-style-type: none;
     counter-increment: list;
     position: relative;
+    font-size: 16px;
+    margin-bottom: 15px;
+    line-height: 21px;
 }
 
 .general-content ul li:after {
@@ -1562,6 +1645,7 @@ footer p {
 }
 header.carousel .item .carousel-caption h1 {
     font-size: 75px;
+    line-height: 80px;
 }
 .panel-default.liner {
     border-left: none;
@@ -2056,13 +2140,16 @@ header.carousel .item .carousel-caption h1 {
     margin-right: 0;
 }
 
+/*
 .carousel-caption {
     left: 15%;
     right: 15%;
 }
+*/
 
 header.carousel .item .carousel-caption h1 {
     font-size: 60px;
+    line-height: 65px;
 }
 
 .features-text {
@@ -2098,10 +2185,12 @@ header.carousel .item .carousel-caption h1 {
 .carousel-control {
     display: none;
 }
+/*
 .carousel-caption {
     left: 5%;
     right: 5%;
 }
+*/
 header.carousel .item .carousel-caption h1 {
     top: 30%;
     font-size: 50px;
@@ -2297,8 +2386,18 @@ footer .download {
     header.carousel .carousel {
         height: 70%;
     }
+    
+    #menu-types .col-md-6{
+	    width: 100%;
+    }
 }
 
 @-moz-document url-prefix() {
   fieldset { display: table-cell; }
+}
+
+
+
+@media(max-width:480px) {
+		
 }

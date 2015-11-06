@@ -16,7 +16,7 @@ get_header(); the_post(); ?>
     <!-- Features Section -->
         <section class="features-intro category-section">
 			<div class="container">
-				<div class="row">
+				<div  class="row">
 				<?php 
 				        if ( have_posts() ) : while ( have_posts() ) : the_post(); 
 				?>

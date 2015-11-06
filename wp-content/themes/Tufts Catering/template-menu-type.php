@@ -16,7 +16,7 @@ get_header(); the_post(); ?>
     <!-- Features Section -->
         <section class="features-intro category-section">
 			<div class="container">
-				<div class="row">
+				<div id="menu-types" class="row">
 				<?php 
 				        $mcat = get_field('menu_category'); 
 				        query_posts('post_type=menu&menu-type='.$mcat->slug.'&post_status=publish&posts_per_page=-1');
@@ -25,7 +25,9 @@ get_header(); the_post(); ?>
 					<div class="col-md-6">
 						<div class="category">
                             <a href="<?php the_permalink(); ?>" title="Party Platters">
-                                <?php the_post_thumbnail('category'); ?>
+                                <?php // the_post_thumbnail('category'); 
+	                                $img = wp_get_attachment_image_src(get_post_thumbnail_id(), 'category'); ?>
+                               <img src="<?php echo $img[0]; ?>" />
                                 <div class="category-name">
                                     <div class="line"></div>
                                     <h4><?php the_title(); ?></h4>

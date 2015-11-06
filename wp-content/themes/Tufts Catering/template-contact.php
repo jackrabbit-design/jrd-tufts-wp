@@ -5,7 +5,7 @@ get_header(); the_post(); ?>
         $bgimg = get_field('default_page_banner','options');
         $bgimgurl = $bgimg['sizes']['page-banner'];
         $bgimg2 = get_field('page_banner_image'); 
-        if(isset($bgimg2['sizes']['page-banner'])){ $bgimgurl = $bgimg['sizes']['page-banner']; } ?>
+        if(isset($bgimg2['sizes']['page-banner'])){ $bgimgurl = $bgimg2['sizes']['page-banner']; } ?>
     <!-- Full Page Image Background Carousel Header -->
     <header class="header-image" style="background-image: url(<?php echo $bgimgurl; ?>);">
         <div class="headline">
@@ -167,10 +167,10 @@ myLayer.setGeoJSON(geoJson); */
                     <div class="panel panel-default">
                         <div class="panel-heading">
                             <h4 class="panel-title">
-                                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapse<?php echo $c; ?>"><?php the_sub_field('direction_title'); ?><span class="glyphicon glyphicon-plus"></span></a>
+                                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapse<?php echo $c; ?>l"><?php the_sub_field('direction_title'); ?><span class="glyphicon glyphicon-plus"></span></a>
                             </h4>
                         </div>
-                        <div id="collapse<?php echo $c; ?>" class="panel-collapse collapse">
+                        <div id="collapse<?php echo $c; ?>l" class="panel-collapse collapse">
                             <div class="panel-body">
                                 <ol>
                                 <?php while(has_sub_field('direction_list')): ?>
@@ -189,14 +189,14 @@ myLayer.setGeoJSON(geoJson); */
             <div class="col-md-6">
                 <div class="directions">
                 <div class="panel-group" id="accordionRight">
-                    <?php $c = 1; while(has_sub_field('right_column_directions')): ?>
+                    <?php $r = 1; while(has_sub_field('right_column_directions')): ?>
                     <div class="panel panel-default">
                         <div class="panel-heading">
                             <h4 class="panel-title">
-                                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapse<?php echo $c; ?>"><?php the_sub_field('direction_title'); ?><span class="glyphicon glyphicon-plus"></span></a>
+                                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapse<?php echo $r; ?>r"><?php the_sub_field('direction_title'); ?><span class="glyphicon glyphicon-plus"></span></a>
                             </h4>
                         </div>
-                        <div id="collapse<?php echo $c; ?>" class="panel-collapse collapse">
+                        <div id="collapse<?php echo $r; ?>r" class="panel-collapse collapse">
                             <div class="panel-body">
                                 <ol>
                                 <?php while(has_sub_field('direction_list')): ?>
@@ -207,7 +207,7 @@ myLayer.setGeoJSON(geoJson); */
                         </div>
                     </div>
                     <!-- /.panel -->
-                    <?php $c++; endwhile; ?>
+                    <?php $r++; endwhile; ?>
                 </div>
                 <!-- /.panel-group -->
                 </div>
@@ -226,82 +226,12 @@ myLayer.setGeoJSON(geoJson); */
         <hr>
 			<div class="container">
 				<div class="row">
-<!--  <form name="sentMessage" id="contactForm" novalidate>
-                        <div class="col-md-4">
-                            <div class="control-group form-group">
-                                <div class="controls">
-                                    <label>Name: <span>*</span></label>
-                                    <input type="text" class="form-control" id="name" required data-validation-required-message="Please enter your name.">
-                                    <p class="help-block"></p>
-                                </div>
-                            </div>
-                            <div class="control-group form-group">
-                                <div class="controls">
-                                    <label>Department:</label>
-                                    <input type="text" class="form-control" id="department" >
-                                </div>
-                            </div>
-                        </div>
-</form> -->
-					<?php gravity_form( 1, true, false); ?>
-                    <div class="col-md-12">
-                        <h3 class="title-section">Get in touch with Tufts Catering</h3>
-                    </div>
+					<div class="col-md-12">
 					
-
-
-                  <!-- <form name="sentMessage" id="contactForm" novalidate>
-                        <div class="col-md-4">
-                            <div class="control-group form-group">
-                                <div class="controls">
-                                    <label>Name: <span>*</span></label>
-                                    <input type="text" class="form-control" id="name" required data-validation-required-message="Please enter your name.">
-                                    <p class="help-block"></p>
-                                </div>
-                            </div>
-                            <div class="control-group form-group">
-                                <div class="controls">
-                                    <label>Department:</label>
-                                    <input type="text" class="form-control" id="department" >
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-md-4">
-                            <div class="control-group form-group">
-                                <div class="controls">
-                                    <label>Email Address: <span>*</span></label>
-                                    <input type="email" class="form-control" id="email" required data-validation-required-message="Please enter your email address.">
-                                    <p class="help-block"></p>
-                                </div>
-                            </div>
-                            <div class="control-group form-group">
-                                <div class="controls">
-                                    <label>Phone Number:</label>
-                                    <input type="tel" class="form-control" id="phone" >
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-md-4">
-                            <div class="control-group form-group">
-                                <div class="controls">
-                                    <label>Message:</label>
-                                    <textarea rows="5" cols="100" class="form-control" id="message" maxlength="999" style="resize:none"></textarea>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-md-12">
-                            <div class="controls center">
-                                <div id="success"></div>
-                            
-                                <button type="submit" class="btn btn-primary">Send Message</button>
-                            </div>
-                        </div>
-
-
-                    </form>  -->
+						<?php gravity_form( 1, true, false); ?>
+                 
+					</div>
+                 
 				</div>
 			</div>
 		</section>

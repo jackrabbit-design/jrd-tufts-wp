@@ -79,8 +79,9 @@
 		                            <?php while(has_sub_field('description_sections')): ?>
 		                            <?php if(get_sub_field('description_section_width') == 'full'){ ?>
 		                                    <!-- <div class="col-md-12"> -->
+		                                    	<?php if($headlineItalic = get_sub_field('description_section_headline_italic')): ?><p><em><?php echo $headlineItalic; ?></em></p><?php endif; ?>
 		                                        <?php if(get_sub_field('description_section_headline')): ?><span><?php the_sub_field('description_section_headline'); ?></span><?php endif; ?>
-		                                        <?php if($headlineItalic = get_sub_field('description_section_headline_italic')): ?><p><em><?php echo $headlineItalic; ?></em></p><?php endif; ?>
+		                                       
 		                                       	<?php while(has_sub_field('description_section_items')): ?>
 		                                         <p><?php the_sub_field('item_name'); ?></p>
 		                                        <?php endwhile; ?>
@@ -131,7 +132,7 @@
                                         </tr>
                                     <?php } else { ?>
                                         <tr>
-                                            <td><?php the_sub_field('item_name'); if(get_sub_field('item_description')){ ?><br><small><i><?php the_sub_field('item_description'); ?></i></small><?php } ?></td>
+                                            <td><?php the_sub_field('item_name'); if(get_sub_field('item_description')){ ?><br><small><?php the_sub_field('item_description'); ?></small><?php } ?></td>
                                             <?php if($numcols >= 1){ ?><td><?php the_sub_field('column_1'); ?></td><?php } ?>
                                             <?php if($numcols >= 2){ ?><td><?php the_sub_field('column_2'); ?></td><?php } ?>
                                             <?php if($numcols >= 3){ ?><td><?php the_sub_field('column_3'); ?></td><?php } ?>
@@ -175,14 +176,14 @@
                                 <h3><?php the_field('po_headline','options'); ?></h3>
                                 <div class="col-xs-5">
                                     <img alt="" src="<?php the_field('po_left_image','options'); ?>" />
-                                    <a href="<?php the_field('po_left_button_link','options'); ?>" title="Order Online" target="_blank"><?php the_field('po_left_button_link_text','options'); ?></a>
+                                    <a class="order-button" href="<?php the_field('po_left_button_link','options'); ?>" title="Order Online" target="_blank"><?php the_field('po_left_button_link_text','options'); ?></a>
                                 </div>
                                 <div class="col-xs-2">
                                     <img alt="" src="<?php bloginfo('url'); ?>/ui/images/or-vertical.png" class="" height="192" width="32">
                                 </div>
                                 <div class="col-xs-5">
                                     <img alt="" src="<?php the_field('po_right_image','options'); ?>" />
-                                    <p>CALL <strong><?php the_field('po_phone_number_text','options'); ?></strong></p>
+                                    <p class="phone">CALL <br/><strong><?php the_field('po_phone_number_text','options'); ?></strong></p>
                                 </div>
                             </div>
 <?php endif; endwhile; ?>
