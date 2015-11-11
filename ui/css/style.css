@@ -1265,9 +1265,11 @@ position: relative;
 }
 
 
+/*
 #map, #map-resp{
 	background: url(../images/map.jpg) no-repeat center center; background-size: cover;
 }
+*/
 
 .general-content h1,
 .general-content h2,
@@ -1965,10 +1967,15 @@ header.carousel .item .carousel-caption h1 {
 }
 */
 header.carousel .item .carousel-caption h1 {
-    top: 30%;
-    font-size: 50px;
+    top: 15%;
+    font-size: 55px;
     line-height: 60px;
 }
+
+.carousel-control{
+	display: none;
+}
+
 header.carousel .item .carousel-caption a {
     bottom: 25%;
 }
@@ -2026,8 +2033,8 @@ header.carousel .item .carousel-caption a {
 }
 */
 header.carousel .item .carousel-caption h1 {
-    font-size: 45px;
-    line-height: 50px;
+    font-size: 48px;
+    line-height: 52px;
 }
 .panel-body {
     padding: 0 5%;

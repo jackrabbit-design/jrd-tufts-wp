@@ -23,10 +23,11 @@ get_header(); the_post(); ?>
 						
 							<div id='map-resp' style="height: 520px; position: relative; width: 100%;"></div>
 						</div>
-<script>/*
-L.mapbox.accessToken = 'pk.eyJ1IjoiYWxlamFuZHJvampzIiwiYSI6ImNpZnEyOWJiaDZyYWdzaWtxbzlhaXcyZzAifQ.CqyCw-Fqu1WJbK1M_zZa1g';
+<script>
+
+L.mapbox.accessToken = 'pk.eyJ1Ijoia2V2aW5qcmQiLCJhIjoiY2lnaTYzYmp4ODRqeXcwbHU3N3BycnBieiJ9.K3qj1gEXt8w3s-aSa9iT6w';
 //var map = L.mapbox.map('map-resp', 'alejandrojjs.nmoefom9');
-var map = L.mapbox.map('map-resp', 'alejandrojjs.nmoefom9');
+var map = L.mapbox.map('map-resp', 'kevinjrd.o507np6i');
 
 var myLayer = L.mapbox.featureLayer().addTo(map);
 
@@ -39,6 +40,31 @@ map.scrollWheelZoom.disable();
 // Disable tap handler, if present.
 if (map.tap) map.tap.disable();
 
+
+var geoJson = [{
+	"type": "FeatureCollection",
+	"features": [{
+		"type": "Feature",
+		"properties": {
+			//"title": "89 Curtis St",
+			//"description": "",
+			"icon": {
+	            "iconUrl": "<?php bloginfo('url'); ?>/ui/images/marked.png",
+	            "iconSize": [75, 87], // size of the icon
+	            "iconAnchor": [25, 25], // point of the icon which will correspond to marker's location
+	            "popupAnchor": [0, -25], // point from which the popup should open relative to the iconAnchor
+	            "className": "dot"
+	        }
+		},
+		"geometry": {
+			"coordinates": [-71.125035, 42.406319],
+			"type": "Point"
+		},
+		"id": "00cc9f35e1e4a8bc0646c4cb2116aaa1"
+	}],
+	"id": "kevinjrd.o507np6i"
+}]
+/*
 var geoJson = [{
     "type": "Feature",
     "geometry": {
@@ -57,6 +83,7 @@ var geoJson = [{
         }
     }
 }];
+*/
 
 // Set a custom icon on each marker based on feature properties.
 myLayer.on('layeradd', function(e) {
@@ -67,7 +94,8 @@ myLayer.on('layeradd', function(e) {
 });
 
 // Add features to the map.
-myLayer.setGeoJSON(geoJson); */ 
+myLayer.setGeoJSON(geoJson); 
+
 </script>
 					</div>
 					<div class="col-md-6 nopadding">
@@ -96,9 +124,12 @@ myLayer.setGeoJSON(geoJson); */
 						<div style="position: relative; width: 100%; height: 100%;">
 							<div id='map' style="height: 520px; position: relative; width: 100%;"></div>
 						</div>
-<script> /*
-L.mapbox.accessToken = 'pk.eyJ1IjoiYWxlamFuZHJvampzIiwiYSI6ImNpZnEyOWJiaDZyYWdzaWtxbzlhaXcyZzAifQ.CqyCw-Fqu1WJbK1M_zZa1g';
-var map = L.mapbox.map('map', 'alejandrojjs.nmoefom9');
+<script>
+	
+L.mapbox.accessToken = 'pk.eyJ1Ijoia2V2aW5qcmQiLCJhIjoiY2lnaTYzYmp4ODRqeXcwbHU3N3BycnBieiJ9.K3qj1gEXt8w3s-aSa9iT6w';
+//var map = L.mapbox.map('map-resp', 'alejandrojjs.nmoefom9');
+
+var map = L.mapbox.map('map', 'kevinjrd.o507np6i');
 
 var myLayer = L.mapbox.featureLayer().addTo(map);
 
@@ -110,6 +141,7 @@ map.scrollWheelZoom.disable();
 
 // Disable tap handler, if present.
 if (map.tap) map.tap.disable();
+/*
 
 var geoJson = [{
     "type": "Feature",
@@ -130,6 +162,32 @@ var geoJson = [{
         }
     }
 }];
+*/
+
+
+var geoJson = [{
+	"type": "FeatureCollection",
+	"features": [{
+		"type": "Feature",
+		"properties": {
+			//"title": "89 Curtis St",
+			//"description": "",
+			"icon": {
+	            "iconUrl": "<?php bloginfo('url'); ?>/ui/images/marked.png",
+	            "iconSize": [75, 87], // size of the icon
+	            "iconAnchor": [25, 25], // point of the icon which will correspond to marker's location
+	            "popupAnchor": [0, -25], // point from which the popup should open relative to the iconAnchor
+	            "className": "dot"
+	        }
+		},
+		"geometry": {
+			"coordinates": [-71.125035, 42.406319],
+			"type": "Point"
+		},
+		"id": "00cc9f35e1e4a8bc0646c4cb2116aaa1"
+	}],
+	"id": "kevinjrd.o507np6i"
+}]
 
 // Set a custom icon on each marker based on feature properties.
 myLayer.on('layeradd', function(e) {
@@ -140,7 +198,7 @@ myLayer.on('layeradd', function(e) {
 });
 
 // Add features to the map.
-myLayer.setGeoJSON(geoJson); */
+myLayer.setGeoJSON(geoJson);
 </script>
 					</div>
 				</div>
