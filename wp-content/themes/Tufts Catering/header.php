@@ -51,7 +51,7 @@
                 <h1>
                 	<a class="navbar-brand" href="<?php bloginfo('url'); ?>" title="TUFTS - Catering">
                 		<img alt="" src="<?php bloginfo('url'); ?>/ui/images/logo.png"/></a>
-                		<div class="rounded-tip"></div>
+                		<span class="rounded-tip"></span>
                 	</h1>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->

@@ -167,7 +167,12 @@
                             
                             <div class="menu-information">
                                 <h3><?php the_sub_field('sidebar_headline'); ?></h3>
+                                
                                 <?php the_sub_field('sidebar_content'); ?>
+                                <h4>Menu Key</h4>
+								<p>VM: Vegetarian<br/>
+								VG: Vegan<br/>
+								GF: Gluten-Free</p>
                             </div>
 <?php 
         elseif(get_row_layout() == "place_an_order"): 

@@ -12,6 +12,10 @@ jQuery(function($){
 		
 	});
 
+
+	$("#commentForm").validate();
+
+
     var shrinkHeader = 300;
     $(window).scroll(function() {
         var scroll = getCurrentScroll();
