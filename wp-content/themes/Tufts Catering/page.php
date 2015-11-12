@@ -42,7 +42,7 @@
 			<div class="container">
                 <!-- Intro Content -->
                 <div class="row">
-                    <div class="general-content">
+                    <div class="general-content interior">
                         <?php get_template_part('content','general'); ?>
                     </div>
                 </div>

@@ -5,15 +5,15 @@
 new WOW().init();
 
 jQuery(function($){
+	
 	$('.navbar-nav > li.menu-item-has-children ').append('<span></span>');
-
 	$('.navbar-nav li span').on('click', function(){
 		$(this).siblings('ul').toggleClass('open');
 		
 	});
 
 
-	$("#commentForm").validate();
+// 	$("#commentForm").validate();
 
 
     var shrinkHeader = 300;
