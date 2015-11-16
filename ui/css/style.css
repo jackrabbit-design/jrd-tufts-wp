@@ -336,7 +336,7 @@ section {
 
 
 .table>tbody>tr>td, .table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th, .table>thead>tr>td, .table>thead>tr>th{
-	padding: 8px 0;
+	padding: 8px;
 }
 
 .panel {
@@ -441,8 +441,14 @@ section {
     text-align: center;
 }
 
+/*
 .features-text.bio{
     padding: 12% 100px;
+}
+*/
+
+.features-text.bio{
+    padding: 5% 100px;
 }
 
 .features-text h1 {
@@ -581,7 +587,7 @@ section {
 
 .features-text ul li span {
     display: inline-block;
-    width: 130px;
+    width: 152px;
 }
 
 .title-section {
@@ -1178,6 +1184,11 @@ th {
 td:first-child {
     text-align: left;
     color: #5f636a;
+}
+
+.table td:not(:first-child),.table th:not(:first-child) {
+    text-align: right;
+/*     color: #5f636a; */
 }
 
 .menus .order-section {
@@ -2125,6 +2136,9 @@ footer .download {
 	.navbar-nav > li.menu-item-has-children > a{
 		width: 75%; float: left;
 	}
+	.navbar-nav > li.menu-item-has-children > a:after{
+		content: none;
+	}
 	
 	.navbar-nav > li.menu-item-has-children span{
 		    width: 25%;
@@ -2236,23 +2250,6 @@ footer .download:hover {
   background-color: #5f636a;
 }
 
-/*
-footer .download:before {
-  content: "";
-  position: absolute;
-  background-color: #5f636a;
-  bottom: 0;
-  left: 0;
-  right: 100%;
-  top: 0;
-  z-index: -1;
-  -webkit-transition: right 0.05s ease-in;
-}
-
-footer .download:hover:before {
-  right: 0;
-}
-*/
 
 footer .university {
     display: block;
@@ -2274,4 +2271,63 @@ footer .university {
 	.column-one-footer .foot-address{display: block; margin: 0 auto 20px;}	
 	.column-one-footer .foot-link{top: auto; display: block; margin: 0 auto; text-align: center;}
 	footer .download{padding: 10px 0; margin: 0 auto;}
+}
+
+.four-zero-four{
+	height: 81vh;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+}
+
+.four-zero-four .container{
+	position: absolute; 
+	top: 40%; 
+	left: 50%;
+	-webkit-transform: translate(-50%, -50%);
+	-moz-transform: translate(-50%, -50%);
+	-webkit-transform: translate(-50%, -50%);
+	padding: 0;
+	margin: 0;
+	text-align: center;
+}
+.four-zero-four h1{
+	color: white;
+    font-family: "Conv_Monthoers";
+    font-size: 80px;
+    font-weight: 400;
+    margin-bottom: 20px;
+    
+}
+
+.four-zero-four h1 small{
+	display: block;
+	color: white;
+}
+
+/*Address Fix*/
+.our-locations{
+	text-align: left;
+	 
+	    padding: 0 40px 30px;
+}
+
+.our-locations h4{
+	color: #f38a00;
+    font-size: 20px;
+        font-family: "Gudea-Bold";
+    letter-spacing: 2px;
+}
+
+.address{
+	display: inline-block;
+	vertical-align: top;
+	text-align: left;
+}
+
+.address p {
+	margin: auto auto 10px;
+}
+.address.acol-one{
+	margin-right: 20px;
 }

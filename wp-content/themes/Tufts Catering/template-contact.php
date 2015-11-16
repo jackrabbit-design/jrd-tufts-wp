@@ -51,8 +51,8 @@ var geoJson = [{
 			"icon": {
 	            "iconUrl": "<?php bloginfo('url'); ?>/ui/images/marked.png",
 	            "iconSize": [75, 87], // size of the icon
-	            "iconAnchor": [25, 25], // point of the icon which will correspond to marker's location
-	            "popupAnchor": [0, -25], // point from which the popup should open relative to the iconAnchor
+	            "iconAnchor": [72, 50], // point of the icon which will correspond to marker's location
+	            "popupAnchor": [0, 0], // point from which the popup should open relative to the iconAnchor
 	            "className": "dot"
 	        }
 		},
@@ -100,12 +100,11 @@ myLayer.setGeoJSON(geoJson);
 					</div>
 					<div class="col-md-6 nopadding">
         				<div class="features-text bio" style="background-color: #5f636a;">
-      						<ul>
-                                <li><strong>Tufts Catering</strong></li>
-                                <?php if(get_field('address')): ?><li><?php the_field('address'); ?></li><?php endif; ?>
-                                <?php if(get_field('address_2')): ?><li><?php the_field('address_2'); ?></li><?php endif; ?>
-                                <?php if(get_field('city_state_zip')): ?><li><?php the_field('city_state_zip'); ?></li><?php endif; ?>
-                            </ul>
+        					<div class="our-locations">
+        					<h4>Address</h4>
+							<div class="address acol-one"><?php the_field('address'); ?></div>
+							<div class="address acol-two"><?php the_field('address_2'); ?></div>
+        					</div>
                             <?php if(get_field('days') || get_field('hours')): ?>
                             <ul>
                                 <li><strong>Hours</strong></li>
@@ -175,8 +174,8 @@ var geoJson = [{
 			"icon": {
 	            "iconUrl": "<?php bloginfo('url'); ?>/ui/images/marked.png",
 	            "iconSize": [75, 87], // size of the icon
-	            "iconAnchor": [25, 25], // point of the icon which will correspond to marker's location
-	            "popupAnchor": [0, -25], // point from which the popup should open relative to the iconAnchor
+	            "iconAnchor": [72, 50], // point of the icon which will correspond to marker's location
+	            "popupAnchor": [0, 0], // point from which the popup should open relative to the iconAnchor
 	            "className": "dot"
 	        }
 		},

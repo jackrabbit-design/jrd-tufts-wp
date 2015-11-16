@@ -83,23 +83,23 @@
 		                                        <?php if(get_sub_field('description_section_headline')): ?><span><?php the_sub_field('description_section_headline'); ?></span><?php endif; ?>
 		                                       
 		                                       	<?php while(has_sub_field('description_section_items')): ?>
-		                                         <p><?php the_sub_field('item_name'); ?></p>
+		                                        <?php the_sub_field('item_name'); ?>
 		                                        <?php endwhile; ?>
 		                                    <!-- </div> -->
 		                            <?php } else { ?>
 		                                    <div class="col-md-6">
 		                                        <?php if(get_sub_field('description_section_headline')): ?><span><?php the_sub_field('description_section_headline'); ?></span><?php endif; ?>
 		                                        <?php if($headlineItalic = get_sub_field('description_section_headline_italic')): ?><p><em><?php echo $headlineItalic; ?></em></p><?php endif; ?>
-		                                        <p><?php while(has_sub_field('description_section_items')): ?>
-		                                        <?php the_sub_field('item_name'); ?><br />
-		                                        <?php endwhile; ?></p>
+		                                        <?php while(has_sub_field('description_section_items')): ?>
+		                                        <?php the_sub_field('item_name'); ?>
+		                                        <?php endwhile; ?>
 		                                    </div>
 		                                    <div class="col-md-6">
 		                                        <?php if(get_sub_field('description_section_2_headline')): ?><span><?php the_sub_field('description_section_2_headline'); ?></span><?php endif; ?>
 		                                        <?php if($headlineItalic2 = get_sub_field('description_section_2_headline_italic')): ?><p><em><?php echo $headlineItalic2; ?></em></p><?php endif; ?>
-		                                        <p><?php while(has_sub_field('description_section_2_items')): ?>
-		                                        <?php the_sub_field('item_name'); ?><br />
-		                                        <?php endwhile; ?></p>
+		                                      <?php while(has_sub_field('description_section_2_items')): ?>
+		                                        <?php the_sub_field('item_name'); ?>
+		                                        <?php endwhile; ?>
 		                                    </div>
 		                            <?php } endwhile; ?>
 		                                </div>
@@ -114,6 +114,7 @@
                                     <h3><?php the_sub_field('section_header'); ?></h3>
                                 </div>
                                 <div class="description-menu-type">
+                                  <?php $numcols = get_sub_field('number_of_pricing_columns'); ?>
                                     <table class="table" border="0">
                                     <?php if(get_sub_field('section_description')): ?>
                                         <tr>
@@ -121,7 +122,7 @@
                                             <td>&nbsp;</td>
                                         </tr>
                                     <?php endif; ?>
-                                    <?php $numcols = get_sub_field('number_of_pricing_columns'); ?>
+                                  
                                     <?php $r = 1; $th = get_sub_field('use_first_row_as_table_header'); while(has_sub_field('table_rows')): ?>
                                     <?php if($th == 'yes' && $r == 1){ ?>
                                         <tr>
@@ -167,12 +168,12 @@
                             
                             <div class="menu-information">
                                 <h3><?php the_sub_field('sidebar_headline'); ?></h3>
-                                
-                                <?php the_sub_field('sidebar_content'); ?>
-                                <h4>Menu Key</h4>
+                                  <h4>Menu Key</h4>
 								<p>VM: Vegetarian<br/>
 								VG: Vegan<br/>
 								GF: Gluten-Free</p>
+                                <?php the_sub_field('sidebar_content'); ?>
+                     
                             </div>
 <?php 
         elseif(get_row_layout() == "place_an_order"): 
