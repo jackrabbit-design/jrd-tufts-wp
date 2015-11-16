@@ -1006,6 +1006,8 @@ section {
 .category a img {
     display: block;
     width: 100%;
+    height: auto;
+    max-width: 100%;
 }
 
 .category .category-name {
@@ -1392,8 +1394,17 @@ footer p {
     padding: 20%;
 }
 .features-text.bio {
-    padding: 12% 10%;
+    padding: 12% 15px;
+    height: auto;
 }
+.our-locations{
+padding: 0 15px 10px !important;
+}
+
+.features-text ul{
+	padding: 0 15px 10px;
+}
+
 footer p {
     font-size: 12px;
 }
