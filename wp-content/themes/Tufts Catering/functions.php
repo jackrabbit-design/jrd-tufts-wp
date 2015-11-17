@@ -476,3 +476,11 @@ function clean($string) {
 
    return preg_replace('/[^A-Za-z0-9\-]/', '', $string); // Removes special chars.
 }
+
+
+/* ========================================================================= */
+/* !DISABLE EMOJIS */
+/* ========================================================================= */
+
+remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
+remove_action( 'wp_print_styles', 'print_emoji_styles' );

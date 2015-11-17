@@ -36,6 +36,7 @@ jQuery(function($){
 		$('.border-img').css('max-width', customWidth);
 	});
 
+
     var $sidebar   = $("#sidebar"),
         $window    = $(window),
         offset     = $sidebar.offset(),
@@ -44,6 +45,7 @@ jQuery(function($){
         //console.log($("#left-sidebar").height());
 
     $window.scroll(function() {
+	    if($('#sidebar').length) { 
         if ($window.scrollTop() > offset.top) {
            if ($window.scrollTop() < ($("#left-sidebar").height())-topPadding) {
             $sidebar.stop().animate({
@@ -55,8 +57,9 @@ jQuery(function($){
                 marginTop: 0
             });
         }
+        
+        }
     });
-
 
 
     
