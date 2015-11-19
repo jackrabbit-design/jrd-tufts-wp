@@ -157,6 +157,7 @@ function enqueue_styles() {
     wp_enqueue_style('style', get_bloginfo('url').'/ui/css/style.css', array(), null);
     wp_enqueue_style('font', get_bloginfo('url').'/ui/font-awesome/css/font-awesome.min.css', array(), null);
     wp_enqueue_style('animate', get_bloginfo('url').'/ui/css/animate.css', array(), null);
+    wp_enqueue_style('print', get_bloginfo('url').'/ui/css/print.css', array(), null, 'print');
 }
 add_action('wp_enqueue_scripts', 'enqueue_styles');
 

@@ -1,0 +1,7 @@
+.navbar, .order-section, .download{display: none !important;}
+.header-image{text-align: left;}
+.headline{padding: 0; margin-bottom: 10px;}
+.headline h1{font-size: 48px; color: #fff; margin-bottom: 0;}
+.title-section{text-align: left; margin-bottom: 10px; margin-top: 10px}
+.centered{width: auto;}
+.col-md-7, .col-md-4{display: block; width: 100%;}
