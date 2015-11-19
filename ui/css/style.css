@@ -1486,6 +1486,10 @@ header.carousel .item .carousel-caption h1 {
     margin-bottom: 35px;
     width: 100%;
 }
+
+.border-img img{
+	margin-bottom: 0 !important;
+}
 /*
 footer a, footer p {
     text-align: center;
